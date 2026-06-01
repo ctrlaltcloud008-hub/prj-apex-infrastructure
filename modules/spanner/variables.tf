@@ -35,3 +35,16 @@ variable "environment" {
   type        = string
   description = "The deployment environment (e.g., dev, staging, prod) for resource organization and management."
 }
+
+variable "database_name" {
+  type        = string
+  description = "The unique name for the Spanner database, used for identification within the instance."
+  default     = "apex-database"
+}
+
+
+variable "version_retention_period" {
+  description = "The version retention period for the Spanner database, specifying how long historical versions of data are retained for recovery and auditing purposes."
+  type        = string
+  default     = "7d"
+}

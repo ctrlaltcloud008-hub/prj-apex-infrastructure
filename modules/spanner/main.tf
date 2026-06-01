@@ -11,3 +11,13 @@ resource "google_spanner_instance" "spanner_instance" {
     managed_by  = "terraform"
   }
 }
+
+resource "google_spanner_database" "spanner_database" {
+  project  = var.project_id
+  instance = google_spanner_instance.spanner_instance.name
+  name     = var.database_name
+
+  deletion_protection = false
+
+  version_retention_period = var.version_retention_period
+}
