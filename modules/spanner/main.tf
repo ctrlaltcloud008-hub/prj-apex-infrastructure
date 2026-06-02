@@ -2,6 +2,7 @@ resource "google_spanner_instance" "spanner_instance" {
   project      = var.project_id
   name         = var.spanner_instance_name
   config       = var.spanner_instance_config
+  num_nodes    = 2
   display_name = var.spanner_instance_display_name
   edition      = var.edition
 
