@@ -21,4 +21,5 @@ resource "google_spanner_database" "spanner_database" {
   deletion_protection = false
 
   version_retention_period = var.version_retention_period
+
 }

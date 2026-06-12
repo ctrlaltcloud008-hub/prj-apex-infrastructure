@@ -12,3 +12,9 @@ variable "environment" {
   type        = string
   description = "The deployment environment (e.g., dev, staging, prod) for resource organization and management."
 }
+
+variable "project_region" {
+  type        = string
+  default     = "asia-south1"
+  description = "GCP region for all regional resources. Must match the Cloud Run service region."
+}
